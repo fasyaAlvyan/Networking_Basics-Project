@@ -8,7 +8,7 @@ Proyek ini merupakan simulasi jaringan **Router-on-Stick** menggunakan MikroTik 
 
 ## 🛠️ Konsep Jaringan
 Dalam topologi ini, saya menerapkan:
-* **Router on Stick** Jalur utama transmisi data pada switch 1 (Distributed Switch) dengan menggunakan 1 media transmisi saja untuk bertukar dan meneruskan data antar switch atau router.
+* **Router on Stick** jalur utama untuk transmisi data antara switch 1 (core) dengan router core untuk meneruskan trafik keluar LAN atau melakukan inter vlan routing pada LAN, hanya menggunakan 1 media transmisi saja. link menerapkan tag 802.1Q untuk memisahkan trafik antar vlan secara logis
 * **Trunk path:** Jalur transmisi data untuk menampung frame dengan tag 802.1Q(VLAN) atau untuk menambahkan tag pada frame, bertukar dan meneruskan frame/packet dengan menggunakan 1 media transmisi saja yang terhubung pada End Device dan Intermediary Device. (single link untuk multiple VLAN)
 * **Access path:** Jalur transmisi data untuk client/host yang berfungsi untuk melepas tag 802.1Q(VLAN) pada frame agar client/host dapat membaca frame yang diterima. (VLAN 10 & 20)
 * **Pure-Native path:** Jalur khusus transmisi data untuk device Legacy yang tidak support VLAN dengan mengirim data tanpa tagging VLAN pada frame agar device bisa membaca frame yang diterima. (Switch 2 ↔ Ruijie)
